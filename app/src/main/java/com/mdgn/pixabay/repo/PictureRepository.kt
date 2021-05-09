@@ -15,4 +15,3 @@ class PictureRepository @Inject constructor(private val api : Api) : BaseReposit
     }
 }
 
-//TODO Model - Api - Status - Resources - BaseRepository - Repository -> ViewModel

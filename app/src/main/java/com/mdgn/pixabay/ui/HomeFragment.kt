@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mdgn.pixabay.R
+import com.mdgn.pixabay.ui.vm.PictureViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 //TODO Model - Api - Status - Resources - BaseRepository - Repository - ViewModel - Module
 

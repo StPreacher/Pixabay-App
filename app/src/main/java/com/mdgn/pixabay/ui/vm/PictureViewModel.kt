@@ -6,14 +6,16 @@ import androidx.lifecycle.viewModelScope
 import com.mdgn.pixabay.model.Picture
 import com.mdgn.pixabay.repo.PictureRepository
 import com.mdgn.pixabay.util.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class PictureViewModel @Inject constructor(val repository: PictureRepository) : ViewModel() {
 
     //Guvenlik acisindan asagidaki gibi yapilir
-    private val pictureData = MutableLiveData<Resource<List<Picture>>>()
-    private val totalCount = MutableLiveData<Resource<Int?>>()
+    val pictureData = MutableLiveData<Resource<List<Picture>>>()
+    val totalCount = MutableLiveData<Resource<Int?>>()
 
     fun getPictureData(key : String, query: String){
         viewModelScope.launch {
